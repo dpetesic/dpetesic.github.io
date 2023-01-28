@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Cipher encoder and decoder</title>
+</head>
+
+<body style="background-color: rgb(49, 46, 46);" text="#ffffff">
+<div class="center">
+    <h2 class="title">Cipher encryption and decryption</h2>
+    <label for="cipher" class="cipherTxt">Odaberide cipher: </label><br>
+    <select name="ciphers" id="ciphers" class="ciphers">
+        <option value="rot13">ROT13 Cipher</option>
+        <option value="atbash">Atbash Cipher</option>
+        <option value="vigenere">Vigenere Cipher</option>
+    </select><br>
+    <label for="txtLabel" class="txtLabel">Upišite text: </label><br>
+    <textarea id="text" class="text" rows="5" cols="50"></textarea><br>
+    <label for="keyLabel" id="keyLabel" class="keyLabel">Upišite Key: </label><br>
+    <input type="text" class="key" id="key"><br>
+    <input type="button" class="encryptBtn" value="Encrypt" id="btnEncrypt">
+    <input type="button" class="decryptBtn" value="Decrypt" id="btnDecrypt">
+    <br>
+
+    <label for="cryptedTxt" id="cryptedTxt" class="cryptedTxt">Crypted Text:</label><br>
+    <p class="cryptText" id="changedTxt"></p>
+    
+</div>
+
+</body>
+
+</html>
