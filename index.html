@@ -8,24 +8,41 @@
     <link rel="stylesheet" href="style.css">
     <title>Cipher encoder and decoder</title>
 </head>
-
+<!--Body style-->
 <body style="background-color: rgb(49, 46, 46);" text="#ffffff">
+
+<!--class containing all elements-->
 <div class="center">
     <h2 class="title">Cipher encryption and decryption</h2>
     <label for="cipher" class="cipherTxt">Odaberide cipher: </label><br>
+
+    <!--Dropdown menu-->
     <select name="ciphers" id="ciphers" class="ciphers">
         <option value="rot13">ROT13 Cipher</option>
         <option value="atbash">Atbash Cipher</option>
         <option value="vigenere">Vigenere Cipher</option>
     </select><br>
+
+    <!--Cipher info-->
+    <p id="rot13Info">ROT13 is a simple letter substitution cipher that replaces a letter with the 13th letter after it in the alphabet</p>
+
+    <p id="atbashInfo">The Atbash cipher is a very common and simple cipher that simply encodes a message with the reverse of the alphabet. Basically, when encoded, an "A" becomes a "Z", "B" turns into "Y", etc.</p>
+
+    <p id="vigenereInfo">Vigenere cipher is a method of encrypting alphabetic text by using a series of interwoven Caesar ciphers, based on the letters of a keyword.</p>
+    <!--Text box-->
     <label for="txtLabel" class="txtLabel">Upišite text: </label><br>
     <textarea id="text" class="text" rows="5" cols="50"></textarea><br>
+
+    <!--Key box, hidden when not needed-->
     <label for="keyLabel" id="keyLabel" class="keyLabel">Upišite Key: </label><br>
     <input type="text" class="key" id="key"><br>
+
+    <!--Buttons for encryption-->
     <input type="button" class="encryptBtn" value="Encrypt" id="btnEncrypt">
     <input type="button" class="decryptBtn" value="Decrypt" id="btnDecrypt">
     <br>
 
+    <!--Location of encrypted text-->
     <label for="cryptedTxt" id="cryptedTxt" class="cryptedTxt">Crypted Text:</label><br>
     <p class="cryptText" id="changedTxt"></p>
     

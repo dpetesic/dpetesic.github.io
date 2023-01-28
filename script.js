@@ -5,19 +5,39 @@ const cipherChoice = document.getElementById("ciphers")
 const textBox = document.getElementById("text")
 const keyBox = document.getElementById("key")
 const keyLabel = document.getElementById("keyLabel")
+const rot13Info = document.getElementById("rot13Info")
+const atbashInfo = document.getElementById("atbashInfo")
+const vigenereInfo = document.getElementById("vigenereInfo")
 
 keyBox.hidden = true
 keyLabel.hidden = true
+rot13Info.hidden = true
+atbashInfo.hidden = true
+vigenereInfo.hidden = true
 
 cipherChoice.addEventListener("click", () => {
 
     if(cipherChoice.value == "vigenere"){
         keyBox.hidden = false
         keyLabel.hidden = false
-    } else {
+        vigenereInfo.hidden = false
+        rot13Info.hidden = true
+        atbashInfo.hidden = true
+    } 
+    if(cipherChoice.value == "rot13") {
         keyBox.hidden = true
         keyLabel.hidden = true
-    }
+        rot13Info.hidden = false
+        atbashInfo.hidden = true
+        vigenereInfo.hidden = true
+    } 
+    if(cipherChoice.value == "atbash") {
+        keyBox.hidden = true
+        keyLabel.hidden = true
+        rot13Info.hidden = true
+        atbashInfo.hidden = false
+        vigenereInfo.hidden = true
+  }
 })
 
 
