@@ -52,7 +52,11 @@ encryptBtn.addEventListener("click", () => {
     }
 
     if(cipherChoice.value == "vigenere"){
-        text.textContent = encrypt(textBox.value, keyBox.value)
+        if (keyBox.value === ""){
+          text.textContent = "Input a key for encryption to work."
+        } else {
+          text.textContent = encrypt(textBox.value, keyBox.value)
+        }
     }
 
 })
@@ -68,7 +72,11 @@ decryptBtn.addEventListener("click", () => {
     }
 
     if(cipherChoice.value == "vigenere"){
+      if (keyBox.value === ""){
+        text.textContent = "Input a key for decryption to work."
+      } else {
         text.textContent = decrypt(textBox.value, keyBox.value)
+      }
     }
 })
 
